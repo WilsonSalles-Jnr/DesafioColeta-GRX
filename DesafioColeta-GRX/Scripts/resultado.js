@@ -19,7 +19,6 @@ const pushLastResult = (positiva, negativa, naoAvaliativa) => {
             }
             return -1;
         });
-    console.log(sorted)
     $('#qtdPositiva').html(sorted[0].nome + sorted[0].valor)
     $('#qtdNegativa').html(sorted[1].nome + sorted[1].valor)
     $('#qtdNaoAvaliativa').html(sorted[2].nome + sorted[2].valor)
@@ -50,25 +49,24 @@ const resultadoTotal = () => {
             default:
                 null;
         }
-    })
+    });
 
     let total = positiva + negativa + naoAvaliativa;
-    $('#intTotal').html(total)
-    $('#intPositiva').html(positiva)
-    $('#positivaPorCem').html('% ' + ((100 / total) * positiva).toFixed(2))
-    $('#intNegativa').html(negativa)
-    $('#negativaPorCem').html('% ' + ((100 / total) * negativa).toFixed(2))
-    $('#intNaoAvaliativa').html(naoAvaliativa)
-    $('#naoAvaliativaPorCem').html('% ' + ((100 / total) * naoAvaliativa).toFixed(2))
-    console.log({ positiva, negativa, naoAvaliativa });
+    $('#intTotal').html(total);
+    $('#intPositiva').html(positiva);
+    $('#positivaPorCem').html('% ' + ((100 / total) * positiva).toFixed(2));
+    $('#intNegativa').html(negativa);
+    $('#negativaPorCem').html('% ' + ((100 / total) * negativa).toFixed(2));
+    $('#intNaoAvaliativa').html(naoAvaliativa);
+    $('#naoAvaliativaPorCem').html('% ' + ((100 / total) * naoAvaliativa).toFixed(2));
 }
 
 $('#submit').click((e) => {
     e.preventDefault();
-    const Pergunta1 = $('input[name=logica]:checked', '#formulario').val()
-    const Pergunta2 = $('input[name=desafio]:checked', '#formulario').val()
-    const Pergunta3 = $('#joinGRX').val()
-    const Pergunta4 = $('#text').val()
+    const Pergunta1 = $('input[name=logica]:checked', '#formulario').val();
+    const Pergunta2 = $('input[name=desafio]:checked', '#formulario').val();
+    const Pergunta3 = $('#joinGRX').val();
+    const Pergunta4 = $('#text').val();
     let QuantidadePositiva = 0;
     let QuantidadeNegativa = 0;
     let QuantidadeNaoAvaliativa = 0;
@@ -97,5 +95,5 @@ $('#submit').click((e) => {
     pushLastResult(QuantidadePositiva, QuantidadeNegativa, QuantidadeNaoAvaliativa);
     const retorno = { Pergunta1, Pergunta2, Pergunta3, Pergunta4, QuantidadePositiva, QuantidadeNegativa, QuantidadeNaoAvaliativa };
     pushJSON(retorno);
-    return resultadoTotal()
+    return resultadoTotal();
 })
