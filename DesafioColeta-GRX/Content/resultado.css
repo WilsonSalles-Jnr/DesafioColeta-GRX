@@ -1,0 +1,32 @@
+﻿.resultadoTotal {
+    text-align: center;
+    color: white;
+    background-color: #337ab7;
+    width: 300px;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.resultadoTodos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    display: none;
+}
+
+.resultLine {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 300px;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.resultBox {
+    background-color: #337ab7;
+    color: white;
+    width: 140px;
+    border-radius: 5px;
+}

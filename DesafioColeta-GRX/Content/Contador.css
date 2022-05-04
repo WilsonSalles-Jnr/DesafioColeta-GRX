@@ -23,8 +23,7 @@
     font-weight: bold;
     color: white;
     padding: 1px 10px;
-    border-radius: 10px;
-    position: fixed;
-    margin-left: 200px;
+    border-radius: 0 10px 10px 0;
     filter: opacity(70%);
 }
+
