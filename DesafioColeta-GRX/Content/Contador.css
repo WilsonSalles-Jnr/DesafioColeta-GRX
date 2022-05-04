@@ -1,0 +1,30 @@
+﻿.bg-red {
+    background-color: red;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.text-box {
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    position: center;
+}
+
+.text-box textarea {
+    width: 100%;
+}
+
+.counter {
+    text-align: right;
+    font-size: smaller;
+    font-weight: bold;
+    color: white;
+    padding: 1px 10px;
+    border-radius: 10px;
+    position: fixed;
+    margin-left: 200px;
+    filter: opacity(70%);
+}
