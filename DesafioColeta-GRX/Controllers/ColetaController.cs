@@ -6,9 +6,14 @@ using System.Web.Mvc;
 
 namespace DesafioColeta_GRX.Controllers
 {
-    public class HomeController : Controller
+    public class ColetaController : Controller
     {
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Formulario()
         {
             return View();
         }
