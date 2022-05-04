@@ -6,7 +6,7 @@
 
 <div class="jumbotron text-center">
     <h1>Formulario</h1>
-    <form  id="formulario">
+    <form id="formulario">
         <p>Você se considera bom em lógica?</p>
         <label for="logica" class="btn btn-primary">
             <input type="radio" name="logica" id="logica" value="Sim" checked />
@@ -34,14 +34,52 @@
         </select>
         <p>Por favor, justifique a resposta anterior</p>
         <div class="text-box">
-        <textarea id="text" maxlength="200" rows="5" placeholder="mínimo 15 caracteres máximo 200" name="justificativa"></textarea>
-        <span class="counter bg-red" id="contador">0/200</span>
+            <textarea id="text" maxlength="200" rows="5" placeholder="mínimo 15 caracteres máximo 200" name="justificativa"></textarea>
+            <span class="counter bg-red" id="contador">0/200</span>
         </div>
-        <br />
-
         <br />
         <br />
         <input id="submit" type="submit" value="enviar" class="btn btn-success form-control" disabled />
     </form>
 </div>
-
+<hr />
+<div class="resultadoTodos" id="resultadoAtual">
+    <h1>Ultimo resultado:</h1>
+    <p class="resultadoTotal" id="qtdPositiva">Positiva: 0</p>
+    <p class="resultadoTotal" id="qtdNegativa">Negativa: 0</p>
+    <p class="resultadoTotal" id="qtdNaoAvaliativa">Não avaliativa: 0</p>
+</div>
+<div class="resultadoTodos" id="resultadoTodos">
+    <h1>Total:</h1>
+    <p class="resultadoTotal" id="intTotal">10</p>
+    <div class="resultLine">
+        <div class="resultBox">
+            <p>Quantidade Positiva</p>
+            <p id="intPositiva">7</p>
+        </div>
+        <div class="resultBox">
+            <p>% Positiva</p>
+            <p id="positivaPorCem">70%</p>
+        </div>
+    </div>
+    <div class="resultLine">
+        <div class="resultBox">
+            <p>Quantidade Negativa</p>
+            <p id="intNegativa">2</p>
+        </div>
+        <div class="resultBox">
+            <p>% Negativa</p>
+            <p id="negativaPorCem">20%</p>
+        </div>
+    </div>
+    <div class="resultLine">
+        <div class="resultBox">
+            <p>Quantidade Não Avaliada</p>
+            <p id="intNaoAvaliativa">1</p>
+        </div>
+        <div class="resultBox">
+            <p>% Não Avaliada</p>
+            <p id="naoAvaliativaPorCem">10%</p>
+        </div>
+    </div>
+</div>
