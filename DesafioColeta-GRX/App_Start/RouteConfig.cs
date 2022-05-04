@@ -16,7 +16,7 @@ namespace DesafioColeta_GRX
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Coleta", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
