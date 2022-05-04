@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Formulario";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron text-center">
+    <h1>Formulario</h1>
+    <form>
+        <p>Você se considera bom em lógica?</p>
+        <label for="logica" class="btn btn-primary">
+            <input type="radio" name="logica" id="logica" value="Sim" />
+            Sim
+        </label>
+        <label for="logica" class="btn btn-primary">
+            <input type="radio" name="logica" id="logica" value="Não" />
+            Não
+        </label>
+        <p>Gosta de aprender com desafios?</p>
+        <label for="desafio" class="btn btn-primary">
+            <input type="radio" name="desafio" id="desafio" value="Sim" />
+            Sim
+        </label>
+        <label for="desafio" class="btn btn-primary">
+            <input type="radio" name="desafio" id="desafio" value="Não" />
+            Não
+        </label>
+        <p>Gostaria de fazer parte da GRX?</p>
+        <select class="btn btn-primary form-control">
+            <option value="Sim">Sim</option>
+            <option value="Não">Não</option>
+            <option value="Não sei">Não sei</option>
+            <option value="Agora">Agora!</option>
+        </select>
+        <p>Por favor, justifique a resposta anterior</p>
+        <div class="text-box">
+        <textarea id="text" maxlength="200" rows="5" placeholder="mínimo 15 caracteres máximo 200"></textarea>
+        <span class="counter bg-red" id="contador">0/200</span>
+        </div>
+        <br />
+
+        <br />
+        <br />
+        <input id="submit" type="submit" value="enviar" class="btn btn-success form-control" disabled="false" />
+    </form>
+</div>
+
